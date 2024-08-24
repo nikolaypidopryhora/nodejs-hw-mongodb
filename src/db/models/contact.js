@@ -14,12 +14,6 @@ const contactsSchema = new Schema(
       type: String,
       required: false,
       unique: true,
-      validate: {
-        validator: function (value) {
-          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-        },
-        message: 'Invalid email address format',
-      },
     },
     isFavourite: {
       type: Boolean,
